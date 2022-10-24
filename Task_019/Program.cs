@@ -107,7 +107,7 @@ if (number == numberB)
 }
 else
 {
-    Console.WriteLine($"Число {number}  не является палиндромом, на оботорот вот так {number}");
+    Console.WriteLine($"Число {number}  не является палиндромом, наоборот вот так {number}");
 }
 
 
