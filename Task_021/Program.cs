@@ -32,6 +32,23 @@
 // Console.WriteLine(Math.Round(l, 2));
 
 
+// Console.WriteLine("Введите координаты двух точек чтобы найти расстояние между ними");
+// Console.WriteLine("Первая точка, Введите координату X Y Z");
+// int[] coordinateAxyz = { Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()) };
+
+// Console.WriteLine("Вторая точка, Введите координату X Y Z");
+// int[] coordinateBxyz = { Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()) };
+
+// double l = Math.Sqrt(Math.Pow((coordinateAxyz[0] - coordinateBxyz[0]), 2) + Math.Pow((coordinateAxyz[1] - coordinateBxyz[1]), 2) + Math.Pow((coordinateAxyz[2] - coordinateBxyz[2]), 2));
+
+// Console.WriteLine(Math.Round(l, 2));
+
+double qatro(int[] coordinateA, int[] coordinateB, int index)
+{
+ double qatroAB = Math.Pow((coordinateA[index] - coordinateB[index]), 2);
+ return qatroAB;
+}
+
 Console.WriteLine("Введите координаты двух точек чтобы найти расстояние между ними");
 Console.WriteLine("Первая точка, Введите координату X Y Z");
 int[] coordinateAxyz = { Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()) };
@@ -39,6 +56,6 @@ int[] coordinateAxyz = { Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Co
 Console.WriteLine("Вторая точка, Введите координату X Y Z");
 int[] coordinateBxyz = { Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()) };
 
-double l = Math.Sqrt(Math.Pow((coordinateAxyz[0] - coordinateBxyz[0]), 2) + Math.Pow((coordinateAxyz[1] - coordinateBxyz[1]), 2) + Math.Pow((coordinateAxyz[2] - coordinateBxyz[2]), 2));
+double l = Math.Sqrt(qatro(coordinateAxyz, coordinateBxyz, 0) + qatro(coordinateAxyz, coordinateBxyz, 1)+ qatro(coordinateAxyz, coordinateBxyz, 2));
 
 Console.WriteLine(Math.Round(l, 2));
